@@ -100,11 +100,11 @@ def modifyBook():
     #ouvre le fichier json et recupère ses données
     obj  = json.load(open("alexandry/bibliotheque.json", encoding='utf-8'))
 
-    i = request.args.get('Id')
 
     #parcours d'éléments json et supprime l'élément avec l'id qu'on a mis une fois qu'il l'a trouvé                                                                       
     for i in range(len(obj)):
         if obj[i]["Id"] == id:
+            Id = request.args.get('Id')
             Titre = request.args.get('Titre')
             Auteur = request.args.get('auteur')
             Edition = request.args.get('edition')
@@ -114,7 +114,7 @@ def modifyBook():
             date = request.args.get('date')
 
     #ajoute dans le fichier json
-    data.append({"Titre":Titre,"Auteur":Auteur,"Edition":Edition,"Nombre de page":nb,"Date de publication":date,"genre":[g1,g2]})
+    data.append({"Id":Id,"Titre":Titre,"Auteur":Auteur,"Edition":Edition,"Nombre de page":nb,"Date de publication":date,"genre":[g1,g2]})
 
     #fichier json modifié                                  
     open("alexandry/bibliotheque.json", "w").write(
