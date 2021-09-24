@@ -39,9 +39,10 @@ def api_id(id):
 def form():
     return '<form action="/api/v1/resources/books/create"><label for="Titre">Titre:</label><br><input type="text" id="Titre" name="Titre"><br><label for="auteur">Auteur:</label><br><input type="text" id="auteur" name="auteur"><br><label for="edition">Edition:</label><br><input type="text" id="edition" name="edition"><br><label for="date">Date de publication:</label><br><input type="date" id="date" name="date"><br><label for="nbpages">Nombre de pages:</label><br><input type="number" id="nbpages" name="nbpages"><br><label for="genre1">Genre 1:</label><br><input type="text" id="genre1" name="genre"><br><label for="genre2">Genre 2:</label><br><input type="text" id="genre2" name="genre2"><br><br><input type="submit" value="Submit"></form>'
 
-#appel du post après l'envoi du formulaire
+#création du livre d'après le formulaire
 @app.route('/api/v1/resources/books/create', methods=['GET', 'POST'])
 def postBook():
+    #récupère les données du formulaire
     Titre = request.args.get('Titre')
     Auteur = request.args.get('auteur')
     Edition = request.args.get('edition')
@@ -50,6 +51,8 @@ def postBook():
     g2 = request.args.get('genre2')
     Id = len(data) + 1
     date = request.args.get('date')
+
+    #ajoute dans le fichier json
     data.append({"Id":Id,"Titre":Titre,"Auteur":Auteur,"Edition":Edition,"Nombre de page":nb,"Date de publication":date,"genre":[g1,g2]})
     
     with open("alexandry/bibliotheque.json", "w",encoding='utf8') as file:
@@ -57,14 +60,29 @@ def postBook():
     
     return '<h2>Livre ajouté!</h2></br></br><a href="/">menu</a>'
 
+#cherche un livre pour le supprimer
 @app.route('/api/v1/resources/books/delete/<int:id>',methods=['GET'])
 def deleteBook(id):
 
-    for book in data:
+    #ouvre le fichier json et recupère ses données
+    obj  = json.load(open("alexandry/bibliotheque.json", encoding='utf-8'))
 
-        if book['Id'] == id:
-            data.remove(book)
+    #parcours d'éléments json et supprime l'élément avec l'id qu'on a mis une fois qu'il l'a trouvé                                                                       
+    for i in range(len(obj)):
+        if obj[i]["Id"] == id:
+            obj.pop(i)
+            break
+
+    #fichier json modifié                                  
+    open("alexandry/bibliotheque.json", "w").write(
+        json.dumps(obj, sort_keys=True, indent=4, separators=(',', ': '))
+    )
 
     return '<h2>Livre supprimé!</h2>'
+
+#modifier un livre
+@app.route('/api/v1/resources/books/modify/<int:id>',methods=['PUT'])
+def modifyBook():
+    return ''
 
 app.run()
