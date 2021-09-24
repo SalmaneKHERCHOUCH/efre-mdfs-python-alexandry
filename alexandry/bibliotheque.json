@@ -1,0 +1,12 @@
+{
+    "livre1": {
+        "Id" : 1,
+        "Titre": "Dépouiller Luca en 3 étapes",
+        "Auteur": "Richard CHEN",
+        "Date de publication": "24/09/2021",
+        "Nombre de page": "1000",
+        "Edition": "Delancourt",
+        "Genre":["Economies","Gestion"]
+    }
+    
+}
