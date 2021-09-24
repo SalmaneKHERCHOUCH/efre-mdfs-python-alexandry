@@ -1,169 +1,169 @@
 [
     {
-        "Id": 1,
-        "Titre": "Dépouiller Luca en 3 étapes",
         "Auteur": "Richard CHEN",
         "Date de publication": "24/09/2021",
-        "Nombre de page": "1000",
         "Edition": "Delancourt",
         "Genre": [
             "Economies",
             "Gestion"
-        ]
+        ],
+        "Id": 1,
+        "Nombre de page": "1000",
+        "Titre": "D\u00e9pouiller Luca en 3 \u00e9tapes"
     },
     {
-        "Id": 2,
-        "Titre": "Dépouiller Luca en 1 étapes",
         "Auteur": "Salmane KHERCHOUCH",
         "Date de publication": "01/10/2021",
-        "Nombre de page": "800",
         "Edition": "Delancourt",
         "Genre": [
             "Economies",
             "Gestion"
-        ]
+        ],
+        "Id": 2,
+        "Nombre de page": "800",
+        "Titre": "D\u00e9pouiller Luca en 1 \u00e9tapes"
     },
     {
-        "Id": 3,
-        "Titre": "My Hero Academia",
-        "Auteur": "Kōhei Horikoshi",
+        "Auteur": "K\u014dhei Horikoshi",
         "Date de publication": "3/02/2010",
-        "Nombre de page": "500",
         "Edition": "Shueisha",
         "Genre": [
             "Action",
             "Manga"
-        ]
+        ],
+        "Id": 3,
+        "Nombre de page": "500",
+        "Titre": "My Hero Academia"
     },
     {
-        "Id": 4,
-        "Titre": "Shingeki no Kyojin",
         "Auteur": "Hajime Isayama",
         "Date de publication": "01/05/2009",
-        "Nombre de page": "600",
-        "Edition": "Kōdansha",
+        "Edition": "K\u014ddansha",
         "Genre": [
             "Aventure",
             "Manga"
-        ]
+        ],
+        "Id": 4,
+        "Nombre de page": "600",
+        "Titre": "Shingeki no Kyojin"
     },
     {
-        "Id": 5,
-        "Titre": "My Korean Lover",
         "Auteur": "Dayana Villada",
         "Date de publication": "18/09/2021",
-        "Nombre de page": "250",
         "Edition": "Maud Parent",
         "Genre": [
             "Romance"
-        ]
+        ],
+        "Id": 5,
+        "Nombre de page": "250",
+        "Titre": "My Korean Lover"
     },
     {
-        "Id": 6,
-        "Titre": "Star Wars",
         "Auteur": "Alan Dean Foster",
         "Date de publication": "18/12/1997",
-        "Nombre de page": "3000",
-        "Edition": "Presse de la cité",
+        "Edition": "Presse de la cit\u00e9",
         "Genre": [
             "Fantastique",
             "Exploration"
-        ]
+        ],
+        "Id": 6,
+        "Nombre de page": "3000",
+        "Titre": "Star Wars"
     },
     {
-        "Id": 7,
-        "Titre": "Lucky Luck",
         "Auteur": "Morris",
         "Date de publication": "24/09/2021",
-        "Nombre de page": "400",
         "Edition": "Delancourt",
         "Genre": [
             "Comedie",
             "BD"
-        ]
+        ],
+        "Id": 7,
+        "Nombre de page": "400",
+        "Titre": "Lucky Luck"
     },
     {
-        "Id": 8,
-        "Titre": "Twilight",
         "Auteur": "Stephenie Meyer",
         "Date de publication": "12/03/2005",
-        "Nombre de page": "3000",
         "Edition": "Delancourt",
         "Genre": [
             "Fantastique",
             "Romance"
-        ]
+        ],
+        "Id": 8,
+        "Nombre de page": "3000",
+        "Titre": "Twilight"
     },
     {
-        "Id": 9,
-        "Titre": "Pokemon",
         "Auteur": "Richard CHEN",
         "Date de publication": "24/09/2021",
-        "Nombre de page": "1000",
         "Edition": "Delancourt",
         "Genre": [
             "Fantastique",
             "BD"
-        ]
+        ],
+        "Id": 9,
+        "Nombre de page": "1000",
+        "Titre": "Pokemon"
     },
     {
-        "Id": 10,
-        "Titre": "La voie du succès",
         "Auteur": "Luca Martinolli",
         "Date de publication": "24/09/2021",
-        "Nombre de page": "1000",
         "Edition": "Delancourt",
         "Genre": [
             "Economies",
             "Gestion"
-        ]
+        ],
+        "Id": 10,
+        "Nombre de page": "1000",
+        "Titre": "La voie du succ\u00e8s"
     },
     {
+        "Auteur": null,
+        "Date de publication": "24/09/2021",
+        "Edition": null,
         "Id": 11,
-        "Titre": null,
-        "Auteur": null,
-        "Edition": null,
         "Nombre de page": null,
-        "Date de publication": "24/09/2021",
+        "Titre": null,
         "genre": [
             null,
             null
         ]
     },
     {
+        "Auteur": null,
+        "Date de publication": "24/09/2021",
+        "Edition": null,
         "Id": 12,
-        "Titre": null,
-        "Auteur": null,
-        "Edition": null,
         "Nombre de page": null,
-        "Date de publication": "24/09/2021",
+        "Titre": null,
         "genre": [
             null,
             null
         ]
     },
     {
-        "Id": 13,
-        "Titre": null,
         "Auteur": null,
-        "Edition": null,
-        "Nombre de page": null,
         "Date de publication": null,
+        "Edition": null,
+        "Id": 13,
+        "Nombre de page": null,
+        "Titre": null,
         "genre": [
             null,
             null
         ]
     },
     {
-        "Id": 14,
-        "Titre": "Test4",
-        "Auteur": "bob",
-        "Edition": "toto",
-        "Nombre de page": "100",
-        "Date de publication": "2021-09-22",
+        "Auteur": "Salmane",
+        "Date de publication": "2010-05-10",
+        "Edition": "Ototo",
+        "Id": 15,
+        "Nombre de page": "561",
+        "Titre": "Spice and wolf",
         "genre": [
             null,
-            "Bob"
+            "Fantastique"
         ]
     }
 ]
