@@ -1,102 +1,145 @@
-
-     [{
-        "Id" : 1,
+[
+    {
+        "Id": 1,
         "Titre": "Dépouiller Luca en 3 étapes",
         "Auteur": "Richard CHEN",
         "Date de publication": "24/09/2021",
         "Nombre de page": "1000",
         "Edition": "Delancourt",
-        "Genre":["Economies","Gestion"]
+        "Genre": [
+            "Economies",
+            "Gestion"
+        ]
     },
-
     {
-        "Id" : 2,
+        "Id": 2,
         "Titre": "Dépouiller Luca en 1 étapes",
         "Auteur": "Salmane KHERCHOUCH",
         "Date de publication": "01/10/2021",
         "Nombre de page": "800",
         "Edition": "Delancourt",
-        "Genre":["Economies","Gestion"]
+        "Genre": [
+            "Economies",
+            "Gestion"
+        ]
     },
-
     {
-        "Id" : 3,
+        "Id": 3,
         "Titre": "My Hero Academia",
         "Auteur": "Kōhei Horikoshi",
         "Date de publication": "3/02/2010",
         "Nombre de page": "500",
         "Edition": "Shueisha",
-        "Genre":["Action","Manga"]
+        "Genre": [
+            "Action",
+            "Manga"
+        ]
     },
-
     {
-        "Id" : 4,
+        "Id": 4,
         "Titre": "Shingeki no Kyojin",
         "Auteur": "Hajime Isayama",
         "Date de publication": "01/05/2009",
         "Nombre de page": "600",
         "Edition": "Kōdansha",
-        "Genre":["Aventure","Manga"]
+        "Genre": [
+            "Aventure",
+            "Manga"
+        ]
     },
-
     {
-        "Id" : 5,
+        "Id": 5,
         "Titre": "My Korean Lover",
         "Auteur": "Dayana Villada",
         "Date de publication": "18/09/2021",
         "Nombre de page": "250",
         "Edition": "Maud Parent",
-        "Genre":["Romance"]
+        "Genre": [
+            "Romance"
+        ]
     },
-
     {
-        "Id" : 6,
+        "Id": 6,
         "Titre": "Star Wars",
         "Auteur": "Alan Dean Foster",
         "Date de publication": "18/12/1997",
         "Nombre de page": "3000",
         "Edition": "Presse de la cité",
-        "Genre":["Fantastique","Exploration"]
+        "Genre": [
+            "Fantastique",
+            "Exploration"
+        ]
     },
-
     {
-        "Id" : 7,
+        "Id": 7,
         "Titre": "Lucky Luck",
         "Auteur": "Morris",
         "Date de publication": "24/09/2021",
         "Nombre de page": "400",
         "Edition": "Delancourt",
-        "Genre":["Comedie","BD"]
+        "Genre": [
+            "Comedie",
+            "BD"
+        ]
     },
-
     {
-        "Id" : 8,
+        "Id": 8,
         "Titre": "Twilight",
         "Auteur": "Stephenie Meyer",
         "Date de publication": "12/03/2005",
         "Nombre de page": "3000",
         "Edition": "Delancourt",
-        "Genre":["Fantastique","Romance"]
+        "Genre": [
+            "Fantastique",
+            "Romance"
+        ]
     },
-
     {
-        "Id" : 9,
+        "Id": 9,
         "Titre": "Pokemon",
         "Auteur": "Richard CHEN",
         "Date de publication": "24/09/2021",
         "Nombre de page": "1000",
         "Edition": "Delancourt",
-        "Genre":["Fantastique","BD"]
+        "Genre": [
+            "Fantastique",
+            "BD"
+        ]
     },
-    
     {
-        "Id" : 10,
+        "Id": 10,
         "Titre": "La voie du succès",
         "Auteur": "Luca Martinolli",
         "Date de publication": "24/09/2021",
         "Nombre de page": "1000",
         "Edition": "Delancourt",
-        "Genre":["Economies","Gestion"]
+        "Genre": [
+            "Economies",
+            "Gestion"
+        ]
+    },
+    {
+        "Id": 11,
+        "Titre": null,
+        "Auteur": null,
+        "Edition": null,
+        "Nombre de page": null,
+        "Date de publication": "24/09/2021",
+        "genre": [
+            null,
+            null
+        ]
+    },
+    {
+        "Id": 12,
+        "Titre": null,
+        "Auteur": null,
+        "Edition": null,
+        "Nombre de page": null,
+        "Date de publication": "24/09/2021",
+        "genre": [
+            null,
+            null
+        ]
     }
-
 ]
