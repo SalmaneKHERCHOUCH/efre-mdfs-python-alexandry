@@ -141,5 +141,29 @@
             null,
             null
         ]
+    },
+    {
+        "Id": 13,
+        "Titre": null,
+        "Auteur": null,
+        "Edition": null,
+        "Nombre de page": null,
+        "Date de publication": null,
+        "genre": [
+            null,
+            null
+        ]
+    },
+    {
+        "Id": 14,
+        "Titre": "Test4",
+        "Auteur": "bob",
+        "Edition": "toto",
+        "Nombre de page": "100",
+        "Date de publication": "2021-09-22",
+        "genre": [
+            null,
+            "Bob"
+        ]
     }
 ]

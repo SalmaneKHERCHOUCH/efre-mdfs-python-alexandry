@@ -35,21 +35,21 @@ def api_id(id):
     return jsonify(results)
 
 #formulaire pour créer un livre
-@app.route('/api/v1/resources/form', methods=['GET'])
+@app.route('/api/v1/resources/books/formulaire', methods=['GET'])
 def form():
-    return '<form action="/api/v1/resources/books/create"><label for="Titre">Titre:</label><br><input type="text" id="Titre" name="Titre"><br><label for="auteur">Auteur:</label><br><input type="text" id="auteur" name="auteur"><br><label for="edition">Edition:</label><br><input type="text" id="edition" name="edition"><br><label for="date">Date de publication:</label><br><input type="date" id="date" name="date"><br><label for="nbpages">Nombre de pages:</label><br><input type="number" id="nbpages" name="nbpages"><br><label for="genre1">Genre 1:</label><br><input type="text" id="genre" name="genre"><br><label for="genre2">Genre 2:</label><br><input type="text" id="genre2" name="genre2"><br><br><input type="submit" value="Submit"></form>'
+    return '<form action="/api/v1/resources/books/create"><label for="Titre">Titre:</label><br><input type="text" id="Titre" name="Titre"><br><label for="auteur">Auteur:</label><br><input type="text" id="auteur" name="auteur"><br><label for="edition">Edition:</label><br><input type="text" id="edition" name="edition"><br><label for="date">Date de publication:</label><br><input type="date" id="date" name="date"><br><label for="nbpages">Nombre de pages:</label><br><input type="number" id="nbpages" name="nbpages"><br><label for="genre1">Genre 1:</label><br><input type="text" id="genre1" name="genre"><br><label for="genre2">Genre 2:</label><br><input type="text" id="genre2" name="genre2"><br><br><input type="submit" value="Submit"></form>'
 
 #appel du post après l'envoi du formulaire
 @app.route('/api/v1/resources/books/create', methods=['GET', 'POST'])
 def postBook():
-    Titre = request.form.get('Titre')
-    Auteur = request.form.get('auteur')
-    Edition = request.form.get('edition')
-    nb = request.form.get('nbpages')
-    g1 = request.form.get('genre1')
-    g2 = request.form.get('genre2')
+    Titre = request.args.get('Titre')
+    Auteur = request.args.get('auteur')
+    Edition = request.args.get('edition')
+    nb = request.args.get('nbpages')
+    g1 = request.args.get('genre1')
+    g2 = request.args.get('genre2')
     Id = len(data) + 1
-    date = request.form.get('date')
+    date = request.args.get('date')
     data.append({"Id":Id,"Titre":Titre,"Auteur":Auteur,"Edition":Edition,"Nombre de page":nb,"Date de publication":date,"genre":[g1,g2]})
     
     with open("alexandry/bibliotheque.json", "w",encoding='utf8') as file:
@@ -57,7 +57,7 @@ def postBook():
     
     return '<h2>Livre ajouté!</h2></br></br><a href="/">menu</a>'
 
-@app.route('/api/v1/resources/delete/<int:id>',methods=['GET'])
+@app.route('/api/v1/resources/books/delete/<int:id>',methods=['GET'])
 def deleteBook(id):
 
     for book in data:
