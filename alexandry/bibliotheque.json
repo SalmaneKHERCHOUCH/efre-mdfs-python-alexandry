@@ -155,12 +155,12 @@
         ]
     },
     {
-        "Auteur": "Salmane",
-        "Date de publication": "2010-05-10",
-        "Edition": "Ototo",
-        "Id": 15,
-        "Nombre de page": "561",
-        "Titre": "Spice and wolf",
+        "Auteur": "bob",
+        "Date de publication": "2021-09-22",
+        "Edition": "toto",
+        "Id": 14,
+        "Nombre de page": "100",
+        "Titre": "Test4",
         "genre": [
             null,
             "Fantastique"
