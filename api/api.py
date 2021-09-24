@@ -7,8 +7,8 @@ app.config["DEBUG"] = True
 
 file = 'alexandry/bibliotheque.json'
 
-with open(file) as file:
-        data = json.load(file) #as a dicto
+with open(file, 'r',encoding='utf-8') as file:
+    data = json.load(file)
 
 @app.route('/', methods=['GET'])
 def home():
@@ -16,6 +16,6 @@ def home():
 
 @app.route('/api/v1/resources/books/all', methods=['GET'])
 def api_all():
-    return jsonify(data)
+    return data
 
 app.run()
