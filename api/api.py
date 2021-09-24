@@ -10,7 +10,6 @@ file = 'alexandry/bibliotheque.json'
 #Ensuite on le lit en le stockant dans data
 with open(file, 'r',encoding='utf-8') as file:
     data = json.load(file)
-    print("On veut voir notre fichier json", data)
     
 #Il s'agit d'une route ou lorsque l'url est rentrée on retourne le texte ecrit
 @app.route('/', methods=['GET'])
@@ -35,16 +34,13 @@ def api_id(id):
 
     return jsonify(results)
 
-@app.route('/api/v1/resources/books/create' , methods = ['GET','POST'])
-def create():
-    return
-
-@app.route('/api/form', methods=['GET'])
+#formulaire pour créer un livre
+@app.route('/api/v1/resources/form', methods=['GET'])
 def form():
-    return '<form action="/add/post"><label for="Titre">Titre:</label><br><input type="text" id="Titre" name="Titre"><br><label for="auteur">Auteur:</label><br><input type="text" id="auteur" name="auteur"><br><label for="edition">Edition:</label><br><input type="text" id="edition" name="edition"><br><label for="date">Date de publication:</label><br><input type="date" id="date" name="date"><br><label for="nbpages">Nombre de pages:</label><br><input type="number" id="nbpages" name="nbpages"><br><label for="genre1">Genre 1:</label><br><input type="text" id="genre" name="genre"><br><label for="genre2">Genre 2:</label><br><input type="text" id="genre2" name="genre2"><br><br><input type="submit" value="Submit"></form>'
+    return '<form action="/api/v1/resources/books/create"><label for="Titre">Titre:</label><br><input type="text" id="Titre" name="Titre"><br><label for="auteur">Auteur:</label><br><input type="text" id="auteur" name="auteur"><br><label for="edition">Edition:</label><br><input type="text" id="edition" name="edition"><br><label for="date">Date de publication:</label><br><input type="date" id="date" name="date"><br><label for="nbpages">Nombre de pages:</label><br><input type="number" id="nbpages" name="nbpages"><br><label for="genre1">Genre 1:</label><br><input type="text" id="genre" name="genre"><br><label for="genre2">Genre 2:</label><br><input type="text" id="genre2" name="genre2"><br><br><input type="submit" value="Submit"></form>'
 
 #appel du post après l'envoi du formulaire
-@app.route('/add/post', methods=['GET', 'POST'])
+@app.route('/api/v1/resources/books/create', methods=['GET', 'POST'])
 def postBook():
     Titre = request.form.get('Titre')
     Auteur = request.form.get('auteur')
@@ -67,8 +63,8 @@ def deleteBook(id):
     for book in data:
 
         if book['Id'] == id:
-            del book
+            data.remove(book)
 
-    return 
+    return '<h2>Livre supprimé!</h2>'
 
 app.run()
