@@ -1,5 +1,5 @@
-{
-    "livre1": [{
+
+     [{
         "Id" : 1,
         "Titre": "Dépouiller Luca en 3 étapes",
         "Auteur": "Richard CHEN",
@@ -100,4 +100,3 @@
     }
 
 ]
-}
