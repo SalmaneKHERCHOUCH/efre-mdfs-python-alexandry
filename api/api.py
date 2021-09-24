@@ -89,13 +89,8 @@ def id_modif():
 #formulaire pour modifier un livre
 @app.route('/api/v1/resources/books/formulaire_modif', methods=['GET'])
 def form_modif():
-     #ouvre le fichier json et recupère ses données
-    obj  = json.load(open("alexandry/bibliotheque.json", encoding='utf-8'))
 
-    #parcours d'éléments json et supprime l'élément avec l'id qu'on a mis une fois qu'il l'a trouvé                                                                       
-    for i in range(len(obj)):
-        if obj[i]["Id"] == id:
-            return '<form action="/api/v1/resources/books/modify"><label for="Id">Id:</label><br><input type="text" id="Id" name="Id"><br><label for="Titre">Titre:</label><br><input type="text" id="Titre" name="Titre"><br><label for="auteur">Auteur:</label><br><input type="text" id="auteur" name="auteur"><br><label for="edition">Edition:</label><br><input type="text" id="edition" name="edition"><br><label for="date">Date de publication:</label><br><input type="date" id="date" name="date"><br><label for="nbpages">Nombre de pages:</label><br><input type="number" id="nbpages" name="nbpages"><br><label for="genre1">Genre 1:</label><br><input type="text" id="genre1" name="genre"><br><label for="genre2">Genre 2:</label><br><input type="text" id="genre2" name="genre2"><br><br><input type="submit" value="Submit"></form>'
+    return '<form action="/api/v1/resources/books/modify"><label for="Id">Id:</label><br><input type="text" id="Id" name="Id"><br><label for="Titre">Titre:</label><br><input type="text" id="Titre" name="Titre"><br><label for="auteur">Auteur:</label><br><input type="text" id="auteur" name="auteur"><br><label for="edition">Edition:</label><br><input type="text" id="edition" name="edition"><br><label for="date">Date de publication:</label><br><input type="date" id="date" name="date"><br><label for="nbpages">Nombre de pages:</label><br><input type="number" id="nbpages" name="nbpages"><br><label for="genre1">Genre 1:</label><br><input type="text" id="genre1" name="genre"><br><label for="genre2">Genre 2:</label><br><input type="text" id="genre2" name="genre2"><br><br><input type="submit" value="Submit"></form>'
 
 
 #modifier un livre
@@ -104,6 +99,8 @@ def modifyBook():
 
     #ouvre le fichier json et recupère ses données
     obj  = json.load(open("alexandry/bibliotheque.json", encoding='utf-8'))
+
+    i = request.args.get('Id')
 
     #parcours d'éléments json et supprime l'élément avec l'id qu'on a mis une fois qu'il l'a trouvé                                                                       
     for i in range(len(obj)):
@@ -115,6 +112,9 @@ def modifyBook():
             g1 = request.args.get('genre1')
             g2 = request.args.get('genre2')
             date = request.args.get('date')
+
+    #ajoute dans le fichier json
+    data.append({"Titre":Titre,"Auteur":Auteur,"Edition":Edition,"Nombre de page":nb,"Date de publication":date,"genre":[g1,g2]})
 
     #fichier json modifié                                  
     open("alexandry/bibliotheque.json", "w").write(
